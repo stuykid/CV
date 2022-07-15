@@ -1,0 +1,257 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    margin: 50px auto 1% auto;
+    font-family: 'Sacramento', cursive;
+    /* we can create a dynamic font size.. 16px = 100% = 1em = 1rem; 90px = 562.5% = 5.625em = 5.625rem; */
+    font-size: 562.5%;
+    text-decoration:dashed;
+    color:#F6F6F6;
+    
+    
+} 
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color:#000;
+    padding-bottom: 10px;
+}
+
+/* navigation bar */
+
+.navbar-nav {
+    font-size: 24px;
+
+}
+
+/* Spotlight section */
+
+#spotlight {
+    background-image: url(images/background.jpeg);
+    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   
+    text-align: center;
+    margin: 0 auto;
+    height: 100vh;
+    padding-top: 75px;
+}
+
+
+
+.light  {
+    color: #548CFF;;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+
+.x {
+    padding-bottom: 1%;
+}
+
+
+.light::before {
+
+    position: absolute;
+    content: attr(data-text);
+    /* text-shadow: 0 0 20px color: rgb(0,238,255); */
+    /* text-shadow: 0px 0px 20px color: rgb(0,238,255); */
+    filter: blur(10px) brightness(0px);
+    animation: flicker 3s linear forwards;
+    animation-delay:1s;
+    animation-iteration-count:3;
+    
+
+}
+
+@keyframes flicker {
+
+    0% {
+        filter: blur(5px) brightness(1);
+    }
+    3% {
+        filter: blur(5px) brightness(0);
+    }
+    6% {
+        filter: blur(5px) brightness(0);
+    }
+    7% {
+        filter: blur(5px) brightness(1);
+    }
+    8% {
+        filter: blur(5px) brightness(0);
+    }
+    9% {
+        filter: blur(5px) brightness(1);
+    }
+    10% {
+        filter: blur(5px) brightness(0);
+    }
+    20% {
+        filter: blur(5px) brightness(1);
+    }
+}   
+
+
+
+/* introduction */
+
+
+
+ .profile-pic {
+    height: 20%;
+    width: 20%;
+    padding-bottom: 1%;
+   
+}
+
+.hero {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {    
+    content: "";
+    background-image: url(images/nyc6.jpeg);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.40;
+    background-size: 100% 100%;
+}
+
+.profile {
+    position: relative;  
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+} 
+
+.intro {
+    margin: auto;
+    width: 40%;
+    font-size: 30px;
+}
+
+/* skills */
+#skills {
+    text-align: center;
+}
+
+#skills p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skills-fluid {
+
+    padding: 3% 15% 0%;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+}
+  
+.feature-box {
+    padding: 4.5%;
+    
+}
+  
+.icon {
+    color: #1E56A0;
+    margin-bottom: 1rem;
+}
+  
+.icon:hover {
+    color: #548CFF;
+}
+
+.skill-row {
+    margin: 20px auto 100px auto;
+    text-align: left;
+    width: 50%;
+    
+    
+}
+
+.laptop {
+    margin-right: 30px;
+    width: 25%;
+    float: left;
+}
+
+.motorcycle {
+    width: 25%;
+    float:right;
+    margin-left: 30px;
+
+}
+
+
+/* projects */
+
+#projects {
+    background-color: #1E56A0;
+    height: 100%;
+    margin: auto;
+    padding-top: 30px;
+  }
+  
+  .project-text {
+    font-size: 3rem;
+    line-height: 1.5;
+    color: #F6F6F6;
+    
+  }
+  
+  .project-image {
+    height: 300px;
+    width: 350px;
+    margin: 20px;
+    
+  }
+  
+  .carousel-fluid {
+      padding: 7% 15%;
+  }
+  
+  .carousel-inner {
+      height: 500px;
+      color: #F6F6F6;
+  }
+
+  /* Footer */
+
+  #contact-me {
+    margin-top: 2%;
+  }
+  
+  #contact-me p {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .footer-link {
+    padding: 1% 1%;
+    color: #1E56A0;
+  }
+
+
+  @media (max-width:800px) {
+    .intro {
+        margin: auto;
+        width: auto;
+        font-size: 30px;
+    }
+  }
